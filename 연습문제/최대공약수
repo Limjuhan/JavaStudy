@@ -1,0 +1,18 @@
+public class test2_2 {
+    public static void main(String[] args) {
+        int[] A = {6,12,4};
+
+        int result = A[0];
+
+        for (int i = 1; i < A.length; i++) {
+            result = gcd(result, A[i]);
+        }
+        System.out.println(result);
+    }
+    static int gcd(int a, int b) {
+        if (b==0) {
+            return a;
+        }
+        return gcd(b, a % b);
+    }
+}
